@@ -1,0 +1,169 @@
+This project is a simple command-line calculator written in C. It performs basic arithmetic operations including addition, subtraction, multiplication, and division.
+
+Table of Contents
+Overview
+Features
+Project Structure
+Build Instructions
+Usage
+Code Documentation
+main()
+print_usage()
+add()
+subtract()
+multiply()
+divide()
+Contributing
+License
+Overview
+The calculator takes input directly from the command line and supports the following operations:
+
+Addition
+Subtraction
+Multiplication
+Division
+Features
+Simple and easy-to-use interface
+Basic arithmetic operations
+Error handling for division by zero
+Project Structure
+bash
+Copy code
+calc/
+├── src/
+│   └── calc.c         # Main source file
+├── include/
+│   └── calc.h         # Header file
+├── test/
+│   └── test_calc.c    # Unit tests
+├── Makefile           # Build configuration
+└── README.md          # Project documentation
+Build Instructions
+To build and run the project, follow these steps:
+
+Clone the repository:
+```bash
+git clone https://github.com/lgnq/calc.git
+cd calc
+```
+
+Compile the project using the provided `Makefile`:
+```bash
+make
+```
+
+Run the calculator:
+```bash
+./calc
+```
+
+(Optional) Run the tests:
+```bash
+make test
+```
+
+Usage
+After building the project, you can run the calculator from the command line. Here are some examples of how to use it:
+
+```bash
+./calc 1 + 2
+./calc 3 - 4
+./calc 5 \* 6
+./calc 7 / 8
+```
+
+Code Documentation
+int main(int argc, char *argv[])
+Description: Entry point of the calculator program. It processes command-line arguments and performs calculations based on user input.
+
+Parameters:
+
+`argc`: Argument count.
+`argv`: Argument vector (array of command-line arguments).
+Returns: `0` on successful execution.
+
+```c
+int main(int argc, char *argv[]) {
+// Main function implementation
+}
+```
+
+void print_usage()
+Description: Prints the usage instructions for the calculator program.
+
+Parameters: None.
+
+Returns: None.
+
+```c
+void print_usage() {
+// Print usage instructions
+}
+```
+
+double add(double a, double b)
+Description: Adds two double values.
+
+Parameters:
+
+`a`: First operand.
+`b`: Second operand.
+Returns: The sum of `a` and `b`.
+
+```c
+double add(double a, double b) {
+return a + b;
+}
+```
+
+double subtract(double a, double b)
+Description: Subtracts the second double value from the first.
+
+Parameters:
+
+`a`: First operand.
+`b`: Second operand.
+Returns: The result of `a - b`.
+
+```c
+double subtract(double a, double b) {
+return a - b;
+}
+```
+
+double multiply(double a, double b)
+Description: Multiplies two double values.
+
+Parameters:
+
+`a`: First operand.
+`b`: Second operand.
+Returns: The product of `a` and `b`.
+
+```c
+double multiply(double a, double b) {
+return a * b;
+}
+```
+
+double divide(double a, double b)
+Description: Divides the first double value by the second. Handles division by zero.
+
+Parameters:
+
+`a`: First operand.
+`b`: Second operand.
+Returns: The result of `a / b`. Returns `0` if `b` is `0`.
+
+```c
+double divide(double a, double b) {
+if (b == 0) {
+printf("Error: Division by zero\n");
+return 0;
+}
+return a / b;
+}
+```
+
+Contributing
+If you would like to contribute to this project, please fork the repository and create a pull request with your changes. All contributions are welcome!
